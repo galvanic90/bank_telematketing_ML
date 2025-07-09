@@ -11,7 +11,7 @@ import numpy as np
 
 def plot_confusion_matrix(y_true, y_pred, labels=[0, 1], title='Confusion Matrix', save_path=None):
     """
-    Plotea una matriz de confusión bonita con seaborn.
+    Imprime una matriz de confusión bonita con seaborn.
     """
     cm = confusion_matrix(y_true, y_pred, labels=labels)
     sns.set(font_scale=1.2)
