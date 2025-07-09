@@ -60,7 +60,7 @@ bank_telemarketing_ML/
 ├── src/                    # Python source code
 │   ├── data_preprocessing.py
 │   ├── model_training.py
-|   ├── model_evaluation.py
+│   ├── model_evaluation.py
 │   └── utils.py
 ├── requirements.txt        # Project dependencies
 └── README.md               # This file
