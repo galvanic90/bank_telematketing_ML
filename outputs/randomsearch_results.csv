@@ -1,0 +1,6 @@
+model_name,best_params,best_score
+LogisticRegression,"{'clf__solver': 'lbfgs', 'clf__penalty': 'l2', 'clf__C': 0.01}",0.41146024647610274
+KNN,"{'clf__n_neighbors': 11, 'clf__metric': 'euclidean'}",0.36186083037352423
+RandomForest,"{'clf__n_estimators': 200, 'clf__max_features': 'sqrt', 'clf__max_depth': 10}",0.45715034008648003
+MLP,"{'clf__learning_rate_init': 0.001, 'clf__hidden_layer_sizes': (50,), 'clf__activation': 'relu'}",0.30363697306002146
+SVM,"{'clf__kernel': 'linear', 'clf__gamma': 'scale', 'clf__C': 0.1}",0.3790922542418908
