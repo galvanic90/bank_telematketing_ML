@@ -1,3 +1,4 @@
+import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import (
@@ -6,10 +7,9 @@ from sklearn.metrics import (
     roc_auc_score,
     roc_curve
 )
-import numpy as np
 
 
-def plot_confusion_matrix(y_true, y_pred, labels=[0, 1], title='Confusion Matrix', save_path=None):
+def plot_confusion_matrix(y_true, y_pred, labels=[0, 1], title='Confusion Matrix', save_path="fig_1.png"):
     """
     Imprime una matriz de confusión bonita con seaborn.
     """
@@ -23,11 +23,14 @@ def plot_confusion_matrix(y_true, y_pred, labels=[0, 1], title='Confusion Matrix
     plt.title(title)
     plt.tight_layout()
     if save_path:
-        plt.savefig(save_path)
+        os.makedirs('figures', exist_ok=True)
+        full_path = os.path.join('figures', save_path)
+        plt.savefig(full_path)
+        print(full_path)
     plt.show()
 
 
-def plot_roc_curve(y_true, y_proba, title='ROC Curve', save_path=None):
+def plot_roc_curve(y_true, y_proba, title='ROC Curve', save_path="fig_2.png"):
     """
     Plotea curva ROC y muestra AUC.
     """
@@ -43,7 +46,10 @@ def plot_roc_curve(y_true, y_proba, title='ROC Curve', save_path=None):
     plt.legend(loc='lower right')
     plt.tight_layout()
     if save_path:
-        plt.savefig(save_path)
+        os.makedirs('figures', exist_ok=True)
+        full_path = os.path.join('figures', save_path)
+        plt.savefig(full_path)
+        print(full_path)
     plt.show()
 
     return auc
