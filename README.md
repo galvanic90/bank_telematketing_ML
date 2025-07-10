@@ -60,8 +60,9 @@ bank_telemarketing_ML/
 ├── src/                    # Python source code
 │   ├── data_preprocessing.py
 │   ├── model_training.py
-│   ├── model_evaluation.py
-│   └── utils.py
+│   └── model_evaluation.py
+├── informe_final/
+│   └── entrega2_proyect_modelos_2.pdf
 ├── requirements.txt        # Project dependencies
 └── README.md               # This file
 ```
@@ -72,6 +73,5 @@ The project includes implementations of:
 
 * Logistic Regression
 * Random Forest
-* XGBoost
 * SVM
 * Neural Networks
