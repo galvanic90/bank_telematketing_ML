@@ -3,6 +3,8 @@ from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline as ImbPipeline
 
 from sklearn.model_selection import train_test_split
+
+from src.data_preprocessing import load_data, encode_and_scale, count_yes_no
 from src.model_evaluation import (
     plot_confusion_matrix,
     plot_roc_curve,
@@ -11,9 +13,8 @@ from src.model_evaluation import (
 
 
 def main():
-   
-    from src.data_preprocessing import load_data, encode_and_scale
     df = load_data('data/bank-direct-marketing-campaigns.csv')
+    count_yes_no(df)
     X, y = encode_and_scale(df)
 
    

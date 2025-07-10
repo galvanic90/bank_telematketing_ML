@@ -9,7 +9,16 @@ def load_data(filepath: str) -> pd.DataFrame:
     df.columns = df.columns.str.strip().str.lower()
     return df
 
-
+def count_yes_no(df):
+    number_of_values = df.y.value_counts()
+    total_values =  number_of_values['no'] + number_of_values['yes']
+    yes_percentage = number_of_values['yes'] / total_values
+    no_percentage = number_of_values['no'] / total_values
+    print(number_of_values)
+    print(yes_percentage)
+    print(no_percentage)
+    
+    
 
 def encode_and_scale(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
     if 'y' not in df.columns:
