@@ -16,8 +16,6 @@ This repository contains a machine learning project to analyze and predict the o
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Implemented Models](#implemented-models)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Requirements
 
